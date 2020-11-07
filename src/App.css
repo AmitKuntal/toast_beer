@@ -28,6 +28,59 @@
   color: #61dafb;
 }
 
+
+.main{
+  background-color: #F2F2F2;
+  width: 100vw;
+  height: 100vh;
+}
+
+.feed{
+  margin-left: 25vw;
+  margin-right: 25vw;
+  height: 97vh;
+  overflow-x: auto;
+  background-color: white;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vw;
+}
+
+.beer{
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin-bottom: 1vh;
+  border: 1px solid #E8E8E8;
+  padding-bottom: 1vw;
+}
+
+.feed-image{
+  width: 8vw;
+  height: 15vw;
+}
+
+.title, .controls, .subset{
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+}
+
+.controls{
+  justify-content: space-between;
+}
+
+.control{
+  width: 50%;
+  text-align: center;
+}
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
