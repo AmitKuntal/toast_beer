@@ -25,10 +25,10 @@ export default class Feed extends React.Component{
 
     render(){
         return(
+           
             <div className="feed">    
-            <Beer />  
-                   
-
+                {this.state.beers.map((beer, index)=>{
+                return <Beer key={index} beer={beer}/>})}  
             </div>
         )
     }

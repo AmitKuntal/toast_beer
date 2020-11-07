@@ -63,10 +63,22 @@
   height: 15vw;
 }
 
-.title, .controls, .subset{
+.title, .controls, .tagline{
   border-radius: 4px;
   width: 100%;
   display: flex;
+}
+
+.title{
+  flex-flow: column;
+}
+
+.name{
+  font-weight: bold;
+}
+
+.tagline{
+  font-size: 10px;
 }
 
 .controls{
