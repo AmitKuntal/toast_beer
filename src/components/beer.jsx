@@ -5,7 +5,8 @@ export default class Beer extends React.Component{
         super(props);
         this.state ={
             ...props.beer,
-            comments:[]
+            comments:[],
+            liked:true
         }
     }
 
@@ -16,10 +17,12 @@ export default class Beer extends React.Component{
                     <span className="name">{this.state.name}</span>
                     <p className="tagline">{this.state.tagline}</p>
                 </div>
-                <img src={this.state.image_url || 'https://bitsofco.de/content/images/2018/12/broken-1.png'} className="feed-image" alt="beer"/>
+                <img src={this.state.image_url || 'https://specsonline.com/wp-content/themes/Specs%20Theme/images/default_wine.png'} className="feed-image" alt="beer"/>
                 <div className="controls">
-                    <span className="control">Like</span>
-                    <span className="control">Comment {this.state.comments.length}</span>
+                    <img className="control"
+                        onClick={()=>this.setState({liked:!this.state.liked})}
+                        src={this.state.liked ? 'https://icon-library.com/images/beer-icon-png/beer-icon-png-12.jpg' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ2pQDjUilE1hQpmR8-MslTJmg2oCJdSH92w&usqp=CAU'} alt="like"/>
+                    <span className="control"><img src="https://cdn.onlinewebfonts.com/svg/img_571105.png" alt="comment" className="control" /></span>
                 </div>
             </div>
         )
