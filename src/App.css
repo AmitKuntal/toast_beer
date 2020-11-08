@@ -87,10 +87,10 @@
 }
 
 .control{
-
   width:2vw ;
   height: 2vw;
   text-align: center;
+  display: flex;
 }
 
 

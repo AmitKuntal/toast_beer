@@ -1,11 +1,13 @@
 import React from 'react';
 import Beer from './beer';
+import {connect} from 'react-redux';
 
-export default class Feed extends React.Component{
+
+class Feed extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            beers:[]
+            ...props
         }
     }
 
@@ -13,8 +15,8 @@ export default class Feed extends React.Component{
         fetch('https://api.punkapi.com/v2/beers/random')
         .then(res=>res.json())
         .then(response=>{
-            const beers = this.state.beers;
-            this.setState({beers:[...beers, ...response]})
+            const beers = [...this.props.beers, ...response];
+            this.props.addBeer(beers)
         })
     }
 
@@ -25,11 +27,24 @@ export default class Feed extends React.Component{
 
     render(){
         return(
-           
             <div className="feed">    
-                {this.state.beers.map((beer, index)=>{
+                {this.props.beers.map((beer, index)=>{
                 return <Beer key={index} beer={beer}/>})}  
             </div>
         )
     }
 }
+
+
+const mapStateToProps = (state)=>{
+    return{
+      beers:state.beers
+    }
+  }
+
+const mapDispatchToProps = (dispatch) =>{
+return{
+    addBeer:(payload)=>{dispatch({'type':'ADD_BEER', payload:payload})}
+}
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Feed);
