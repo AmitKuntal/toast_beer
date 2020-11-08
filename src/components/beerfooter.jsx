@@ -9,6 +9,10 @@ function BeerFooter(props){
         setLiked(!liked,props.likeBeer({like:props.likeCount + 1, id:props.id}))
 
     }
+
+    const commentBeer=()=>{
+        
+    }
     return (
         <div className="controls">
             <span className="control">
@@ -18,7 +22,7 @@ function BeerFooter(props){
                 {props.likeCount}    
                 </span>
             <span className="control">
-                <img src="https://cdn.onlinewebfonts.com/svg/img_571105.png" alt="comment" className="control" />
+                <img src="https://cdn.onlinewebfonts.com/svg/img_571105.png" alt="comment" className="control" onClick={commentBeer}/>
                 {props.comments.length}
             </span>
         </div>

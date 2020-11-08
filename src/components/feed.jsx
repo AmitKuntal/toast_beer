@@ -1,6 +1,7 @@
 import React from 'react';
 import Beer from './beer';
 import {connect} from 'react-redux';
+import Navigation from './navigation'
 
 
 class Feed extends React.Component{
@@ -27,10 +28,13 @@ class Feed extends React.Component{
 
     render(){
         return(
+            <>
+            <Navigation />
             <div className="feed">    
                 {this.props.beers.map((beer, index)=>{
                 return <Beer key={index} beer={beer}/>})}  
             </div>
+            </>
         )
     }
 }

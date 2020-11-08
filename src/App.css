@@ -33,11 +33,12 @@
   background-color: #F2F2F2;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: space-around;
 }
 
 .feed{
-  margin-left: 25vw;
-  margin-right: 25vw;
+  margin-right: 35vw;
   height: 97vh;
   overflow-x: auto;
   background-color: white;
@@ -93,6 +94,29 @@
   display: flex;
 }
 
+.nav{
+  margin-top: 3vw;
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  border: 1px solid #E8E8E8;
+  height: fit-content;
+  padding: 3vw;
+  border-radius: 1vw;
+}
+
+.navlink{
+  background-color: gray;
+  padding: 1vw;
+  margin-top: 1vw;
+  border-radius: 1vw;
+  color:white;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
 
 
 

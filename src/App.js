@@ -1,10 +1,12 @@
 import './App.css';
-import Feed from './components/feed';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+
+import Feed from './components/feed';
+import Dashboard from './components/dashboard';
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
               <Feed />
             </Route>
             <Route path="/dashboard">
-              <h1>hi</h1>
+              <Dashboard />
             </Route>
           </Switch>
         </div>
