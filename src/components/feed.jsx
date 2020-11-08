@@ -23,7 +23,7 @@ class Feed extends React.Component{
 
     componentWillMount(){
         this.getBeer();
-        setInterval(this.getBeer,5000)
+        window.getBeerInterval = setInterval(this.getBeer,1000)
     }
 
     render(){

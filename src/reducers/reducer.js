@@ -1,5 +1,6 @@
 const iState = {
-    beers:[]
+    beers:[],
+    view:"GRID"
 } 
 
 
@@ -19,6 +20,12 @@ const reducer = (state = iState, action) =>{
         })
         let updateState = {...state}
         updateState.beers = updateBeers
+        return updateState
+    }
+
+    if(action.type === 'CHANGE_VIEW'){
+        let updateState = {...state}
+        updateState.view=action.payload
         return updateState
     }
 

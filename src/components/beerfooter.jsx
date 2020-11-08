@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {LIKE_ICON_ACTIVE, LIKE_ICON, COMMENT_ICON} from './../config'
 
 
 function BeerFooter(props){
@@ -18,11 +19,11 @@ function BeerFooter(props){
             <span className="control">
                 <img className="control"
                     onClick={likeBeer}
-                    src={liked ? 'https://icon-library.com/images/beer-icon-png/beer-icon-png-12.jpg' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ2pQDjUilE1hQpmR8-MslTJmg2oCJdSH92w&usqp=CAU'} alt="like"/>
+                    src={liked ? LIKE_ICON_ACTIVE : LIKE_ICON} alt="like"/>
                 {props.likeCount}    
                 </span>
             <span className="control">
-                <img src="https://cdn.onlinewebfonts.com/svg/img_571105.png" alt="comment" className="control" onClick={commentBeer}/>
+                <img src={COMMENT_ICON} alt="comment" className="control" onClick={commentBeer}/>
                 {props.comments.length}
             </span>
         </div>

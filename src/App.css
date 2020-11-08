@@ -84,7 +84,7 @@
 }
 
 .controls{
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .control{
@@ -117,6 +117,43 @@
 a{
   text-decoration: none;
 }
+
+.dashboard{
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  margin-right: 35vw;
+  background-color: white;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vw;
+  width: fit-content;
+  height: 97vh;
+}
+
+.gridview{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 12px;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  height: 90vh;
+}
+
+.listView{
+  display: flex;
+  flex-flow: column;
+  height: 90vh;
+  overflow-x: auto;
+}
+
+.gridimage{
+  width: 8vw;
+  height: 15vw;
+}
+
+
 
 
 
